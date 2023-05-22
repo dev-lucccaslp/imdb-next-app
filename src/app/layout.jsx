@@ -1,5 +1,7 @@
-import { Header } from '@/components/Header'
 import './globals.css'
+
+import { Header } from '@/components/Header'
+import { Providers } from '@/app/Providers'
 
 export const metadata = {
   title: 'IMDB',
@@ -10,8 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body >
-        <Header />
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   )
